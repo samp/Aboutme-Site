@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Qualifications page for Sam Palmer">
+    <title>Sam Palmer - Qualifications</title>
+    <link rel="preload" href='fonts/Orkney-Regular.woff2' as="font" crossorigin>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="manifest" href="manifest.json">
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#404040">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Sam Palmer">
+    <meta name="application-name" content="Sam Palmer">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#afeeee">
+</head>
+
+<body>
+    <header>
+        <h1>Sam Palmer</h1>
+    </header>
+    <nav id="mainNav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="skills">Skills</a></li>
+            <li><a href="qualifications">Qualifications</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2 class="contentHeader">Qualifications</h2>
+            <p>Hello, I'm Sam Palmer, a first year cybersecurity student at Staffordshire university.</p>
+            <table>
+                <thead>
+                    <tr id="tableHead">
+                        <th>Level</th>
+                        <th>Title</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A level</td>
+                        <td>Maths</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>A level</td>
+                        <td>Computer science</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>A level</td>
+                        <td>Physics</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>GCSE</td>
+                        <td>Maths</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>GCSE</td>
+                        <td>English literature</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>GCSE</td>
+                        <td>English language</td>
+                        <td>4</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total GCSEs:</td>
+                        <td>10</td>
+                        <td>4-9</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul id="footerInfo">
+                <li>Made by Sam Palmer</li>
+                <li>sam.palmer@student.staffs.ac.uk</li>
+            </ul>
+            <ul id="footerNav">
+                <li><a href="#">Help</a></li>
+                <li><a href="sources">Sources</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function () {
+                //register service worker
+                navigator.serviceWorker.register('/scripts/serviceworker.js', { scope: "/" }).then(
+                    function (registration) {
+                        console.log('Service worker registration successful',
+                            registration);
+                    },
+                    function (err) {
+                        console.log('Service worker registration failed', err);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>

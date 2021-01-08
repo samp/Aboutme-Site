@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Orkney';
+    src: url('../fonts/Orkney-Regular.eot');
+    src: url('../fonts/Orkney-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Orkney-Regular.woff2') format('woff2'), url('../fonts/Orkney-Regular.woff') format('woff'), url('../fonts/Orkney-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: LightCyan;
+    background-color: black;
+    background-image: url("../images/bg-full.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 300px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* header styles */
+
+h1, h2 {
+    font-family: 'Orkney', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0.5em 0;
+}
+
+h1 {
+    font-size: 2.6em;
+    text-align: center;
+    color: Turquoise;
+}
+
+h2 {
+    padding: 1em 0;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+header, footer {
+    background: #404040;
+    padding: 1em;
+}
+
+thead th {
+    font-size: 1.2em;
+    border-bottom: 1px solid white;
+}
+
+/* main nav styles */
+
+#mainNav {
+    position: sticky;
+    z-index: 999;
+    top: 0;
+}
+
+#mainNav ul {
+    list-style-type: none;
+    background-color: PaleTurquoise;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+}
+
+#mainNav li {
+    flex-grow: 1;
+    width: 100%;
+    border: .1em rgb(17, 17, 17) solid;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#mainNav a {
+    min-height: 50px;
+    line-height: 50px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-family: 'Orkney', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.6em;
+}
+
+/* footer styles */
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.7;
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    color: Turquoise;
+}
+
+footer li {
+    padding: 0.2em;
+}
+
+footer nav {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+#footerInfo {
+    text-align: left;
+}
+
+/* content styles */
+
+main {
+    margin: 0;
+    padding: 0.5em 0;
+    background: #202020;
+}
+
+main section {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 1em;
+    justify-content: space-between;
+}
+
+#mainImage img {
+    width: calc(100% - 3em);
+    padding: 0.5em;
+    margin: 0 1em;
+}
+
+main table, p, .contentHeader, .contentImage, article {
+    width: 100%;
+    padding: 1em;
+    margin: 0.5em 0;
+}
+
+section>*, #mainImage img {
+    background-color: #404040;
+    text-align: center;
+}
+
+section article p, section article h3 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+p a {
+    text-decoration: underline;
+    color: turquoise;
+}
+
+ul, ol {
+    list-style-position: inside;
+    display: inline-block;
+    padding-left: 0px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+/* Coffee styles */
+
+fieldset {
+    border: none;
+}
+legend{
+    display:none;
+}
+
+#shotsection {
+    display: none;
+}
+
+#coffeeContent h2 {
+    padding: 0;
+}
+
+#coffeeContent p {
+    margin: 0.5em 0;
+}
+
+#coffeeContent .contentHeader {
+    padding: 1em;
+}
+
+/* TABLETS */
+
+@media only screen and (min-width: 500px) {
+    #mainNav>ul>li {
+        width: calc(25% - .2em);
+    }
+    #coffeeContent article {
+        width: calc(50% - 2.5em);
+    }
+    footer nav {
+        display: flex;
+        flex-flow: row-reverse wrap;
+        justify-content: space-between;
+    }
+    #footerInfo {
+        text-align: right;
+    }
+    footer ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        line-height: 1.7;
+        width: 50%;
+    }
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 800px) {
+    body {
+        max-width: 1200px;
+    }
+    main p, .contentImage, article, main table {
+        width: calc(50% - 2.5em);
+    }
+    #coffeeContent p {
+        width: 100%;
+        padding: 1em 0;
+        margin: 0;
+    }
+    #coffeeContent article {
+        padding: 1em;
+        width: calc(25% - 2.75em);
+    }
+}

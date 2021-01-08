@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Home page for Sam Palmer">
+    <title>Sam Palmer - Coffee Shop</title>
+    <link rel="preload" href='fonts/Orkney-Regular.woff2' as="font" crossorigin>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#404040">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Sam Palmer">
+    <meta name="application-name" content="Sam Palmer">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#afeeee">
+</head>
+
+<body>
+    <!--HEADER-->
+
+    <header>
+        <h1>Sam Palmer</h1>
+    </header>
+    <nav id="mainNav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="skills">Skills</a></li>
+            <li><a href="qualifications">Qualifications</a></li>
+        </ul>
+    </nav>
+
+    <!--MAIN CONTENT-->
+
+    <main>
+        <section id="coffeeContent">
+            <h2 class="contentHeader">Coffee shop</h2>
+            <article>
+                <h2>Drink</h2>
+                <fieldset id="sectionType">
+                    <legend>Drink type</legend>
+
+                </fieldset>
+            </article>
+            <article>
+                <h2>Size</h2>
+                <fieldset>
+                    <legend>Drink size</legend>
+                    <p>
+                        <input type="radio" id="small" name="drinkSize" value="Small">
+                        <label for="small">Small</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="medium" name="drinkSize" value="Medium" checked>
+                        <label for="medium">Medium</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" id="large" name="drinkSize" value="Large">
+                        <label for="large">Large</label>
+                    </p>
+                </fieldset>
+            </article>
+            <article>
+                <h2>Milk</h2>
+                <fieldset id="sectionMilk">
+                    <legend>Milk type</legend>
+
+                </fieldset>
+            </article>
+            <article>
+                <h2>Extras</h2>
+                <fieldset>
+                    <legend>Drink extras</legend>
+                    <p>
+                        <input type="checkbox" id="sugar" name="extras" value="sugar">
+                        <label for="sugar">Sugar</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="cream" name="extras" value="cream">
+                        <label for="cream">Cream</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="syrup" name="extras" value="syrup">
+                        <label for="syrup">Syrup</label>
+                    </p>
+                    <p id="shotsection">
+                        <label for="shots">Shots of syrup: </label>
+                        <input type="number" id="shots" name="extras" value="1" min="1" max="4">
+                    </p>
+                </fieldset>
+            </article>
+            <article id="sectionFavourite">
+                <h2>Favourite</h2>
+                <p id=favouriteDisplay>There is no favourite drink</p>
+                <p id=favouriteCost>£0.00</p>
+                <p>
+                    <button type="button" name="retrieve" id="retrieve">Add to order</button>
+                </p>
+            </article>
+            <article id="sectionCurrent">
+                <h2>Current drink</h2>
+                <p id=currentDrinkDisplay>There is no drink selected</p>
+                <p id=currentDrinkCost>£0.00</p>
+                <p>
+                    <button type="button" name="add" id="add">Add to order</button>
+                </p>
+                <p>
+                    <button type="button" name="save" id="save">Add to favourites</button>
+                </p>
+            </article>
+            <article id="sectionOrder">
+                <h2>Order</h2>
+                <p id=orderDisplay>The order is empty</p>
+                <p id=orderCost>£0.00</p>
+                <p>
+                    <button type="button" name="submit" id="submit">Place order</button>
+                </p>
+            </article>
+            <article id="sectionLoyalty">
+                <h2>Loyalty points</h2>
+                <p id=loyaltyDisplay>0</p>
+                <p>points</p>
+            </article>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+
+    <footer>
+        <nav>
+            <ul id="footerInfo">
+                <li>Made by Sam Palmer</li>
+                <li>sam.palmer@student.staffs.ac.uk</li>
+            </ul>
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="sources">Sources</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function () {
+                //register service worker
+                navigator.serviceWorker.register('/scripts/serviceworker.js', { scope: "/" }).then(
+                    function (registration) {
+                        console.log('Service worker registration successful',
+                            registration);
+                    },
+                    function (err) {
+                        console.log('Service worker registration failed', err);
+                    });
+            });
+        }
+    </script>
+    <script src="scripts/scripts.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Sources page for Sam Palmer">
+    <title>Sam Palmer - Sources</title>
+    <link rel="preload" href='fonts/Orkney-Regular.woff2' as="font" crossorigin>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#404040">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Sam Palmer">
+    <meta name="application-name" content="Sam Palmer">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#afeeee">
+</head>
+
+<body>
+    <header>
+        <h1>Sam Palmer</h1>
+    </header>
+    <nav id="mainNav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="skills">Skills</a></li>
+            <li><a href="qualifications">Qualifications</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2 class="contentHeader">Sources</h2>
+
+            <article>
+                <p><a href="https://unsplash.com/photos/M5tzZtFCOfs">Background</a></p>
+                <p><a href="https://fontawesome.com/icons/laptop-code?style=solid">Favicon</a> (<a
+                        href="https://fontawesome.com/license/free">License</a>)</p>
+            </article>
+
+            <article>
+                <h3>Main page</h3>
+                <p><a href="https://unsplash.com/photos/OqtafYT5kTw">Main image</a></p>
+                <p><a href="https://unsplash.com/photos/0n70cnyOFgc">Capacitors</a></p>
+                <p><a href="https://unsplash.com/photos/feXpdV001o4">Keyboard</a></p>
+                <p><a href="https://www.pexels.com/photo/blur-close-up-device-electronics-1597776/">Cables</a></p>
+            </article>
+
+            <article>
+                <h3>Skills page</h3>
+                <p><a href="https://www.pexels.com/photo/black-and-gray-motherboard-2582937/">Motherboard</a></p>
+                <p><a href="https://www.pexels.com/photo/photo-of-person-typing-on-computer-keyboard-735911/">Typing</a>
+                </p>
+                <p><a href="https://unsplash.com/photos/yGb2igKldYg">Coffee</a></p>
+            </article>
+            <article>
+                <h3>Skills demo</h3>
+                <p><a href="https://www.pexels.com/photo/technology-computer-lines-board-50711/">Main image</a></p>
+                <p><a href="https://unsplash.com/photos/1iVKwElWrPA">Hard disk</a></p>
+                <p><a href="https://unsplash.com/photos/CKpBhTXvLis">CPU</a></p>
+                <p><a href="https://www.pexels.com/photo/black-and-white-hard-disk-drive-2582931/">Installing
+                        components</a></p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul id="footerInfo">
+                <li>Made by Sam Palmer</li>
+                <li>sam.palmer@student.staffs.ac.uk</li>
+            </ul>
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="sources">Sources</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function () {
+                //register service worker
+                navigator.serviceWorker.register('/scripts/serviceworker.js', { scope: "/" }).then(
+                    function (registration) {
+                        console.log('Service worker registration successful',
+                            registration);
+                    },
+                    function (err) {
+                        console.log('Service worker registration failed', err);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>

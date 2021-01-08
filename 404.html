@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Skills page for Sam Palmer">
+    <title>Sam Palmer - Not found</title>
+    <link rel="preload" href='fonts/Orkney-Regular.woff2' as="font" crossorigin>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#404040">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Sam Palmer">
+    <meta name="application-name" content="Sam Palmer">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#afeeee">
+</head>
+
+<body>
+
+    <header>
+        <h1>Sam Palmer</h1>
+    </header>
+    <nav id="mainNav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="skills">Skills</a></li>
+            <li><a href="qualifications">Qualifications</a></li>
+        </ul>
+    </nav>
+    
+    <main id=mainContent>
+        <section>
+            <p>Page not found.</p>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul id="footerInfo">
+                <li>Made by Sam Palmer</li>
+                <li>sam.palmer@student.staffs.ac.uk</li>
+            </ul>
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="sources">Sources</a></li>
+            </ul>
+        </nav>
+    </footer>
+    </div>
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function () {
+                //register service worker
+                navigator.serviceWorker.register('/scripts/serviceworker.js', { scope: "/" }).then(
+                    function (registration) {
+                        console.log('Service worker registration successful',
+                            registration);
+                    },
+                    function (err) {
+                        console.log('Service worker registration failed', err);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>

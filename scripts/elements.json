@@ -1,0 +1,4 @@
+{
+    "milks": ["Whole", "Skimmed", "Semi-skimmed", "Coconut", "Soya"],
+    "types": ["Espresso", "Americano", "Latte", "Cappuccino", "Flat White"]
+}

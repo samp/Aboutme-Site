@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Skills page for Sam Palmer">
+    <title>Sam Palmer - Skills</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/skillsdemo2.css">
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#404040">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Sam Palmer">
+    <meta name="application-name" content="Sam Palmer">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#afeeee">
+</head>
+
+<body>
+    <!--HEADER-->
+
+    <header>
+        <h1>Sam Palmer</h1>
+    </header>
+    <nav id="mainNav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="skills">Skills</a></li>
+            <li><a href="qualifications">Qualifications</a></li>
+        </ul>
+    </nav>
+
+    <!--MAIN CONTENT-->
+
+    <main id="mainContent">
+        <picture id="mainImage">
+            <source srcset="images/circuitboard-desktop.webp" media="(min-width: 500px)" type="image/webp">
+            <source srcset="images/circuitboard-mobile.webp" type="image/webp">
+            <img src="images/circuitboard-fallback.jpg" alt="Close up shot of green circuit board">
+        </picture>
+
+        <!--FIRST SECTION-->
+        <section>
+            <h2 class="contentHeader">PC components</h2>
+
+            <article>
+                <h3>At a minimum, a PC must contain:</h3>
+                <ul>
+                    <li>A motherboard</li>
+                    <li>A CPU</li>
+                    <li>Primary storage (RAM)</li>
+                    <li>Secondary storage</li>
+                    <li>A case</li>
+                    <li>A power supply</li>
+                </ul>
+            </article>
+
+            <p>Additionally, a PC must include cooling and graphics output, though a CPU cooler is almost always
+                included with new CPU purchases, and additional cooling fans are often included in the case. Many
+                modern CPUs can provide onboard graphics, though some do not and a dedicated graphics card would be
+                required.</p>
+
+            <p>The motherboard allows the components to communicate, and also serves as a mounting point for some
+                such as the CPU and its cooler, and RAM. A modern motherboard would include SATA ports, PCI express
+                slots, an
+                internal USB header to allow for front panel USB ports, fan headers, one or more DIMM ranks, and
+                power connectors including the standard 24-pin main power supply connector and the 8 pin CPU power
+                connector. A ROM chip is used to store the BIOS, though modern motherboards use UEFI, which is more
+                flexible, and newer chips can be rewritable to allow for firmware updates. </p>
+
+            <picture class="contentImage">
+                <source srcset="images/cpu-desktop.webp" media="(min-width: 800px)" type="image/webp">
+                <source srcset="images/cpu-tablet.webp" media="(min-width: 500px)" type="image/webp">
+                <source srcset="images/cpu-mobile.webp" media="(min-width: 250px)" type="image/webp">
+                <img src="images/cpu-fallback.jpg" alt="Close up shot of a CPU mounted on a motherboard">
+            </picture>
+        </section>
+
+        <!--SECOND SECTION-->
+        <section>
+            <h2 class="contentHeader">CPU & Storage</h2>
+            <picture class="contentImage">
+                <source srcset="images/harddrive-desktop.webp" media="(min-width: 800px)" type="image/webp">
+                <source srcset="images/harddrive-tablet.webp" media="(min-width: 500px)" type="image/webp">
+                <source srcset="images/harddrive-mobile.webp" media="(min-width: 250px)" type="image/webp">
+                <img src="images/harddrive-fallback.jpg" alt="Greyscale image of computer hard drive">
+            </picture>
+
+            <p>The CPU, or central processing unit, handles basic intructions and allocates resources.</p>
+
+            <p>Random access memory (RAM) is a volatile storage used to store working memory, such as operating
+                system data and running programs. Modern RAM is DDR4 type, though earlier versions are still in use
+                and readily obtainable. DDR versions are not backwards compatible. RAM sticks are typically
+                installed in DIMM ranks in pairs, to take advantage of dual-channel access, though this is not a
+                requirement and just one stick can be installed. Care must be taken to ensure that a pair are
+                installed in matching slots – these are often colour coded or labelled and usually alternate.</p>
+
+            <p>Secondary storage is not required for a PC to power on, though only the BIOS will be accessible
+                without an operating system to load. This may be useful for testing that all other essential
+                components are working correctly before installing the PC in a case, as the hard drive slots are
+                often located in a separate compartment in the case. In modern PC builds, secondary storage is
+                provided in the form of a mechanical hard disk, or a faster solid state drive.</p>
+        </section>
+
+        <!--THIRD SECTION-->
+        <section>
+            <h2 class="contentHeader">Case & power supply</h2>
+
+            <p>The case, or chassis, houses the internal components and helps to direct airflow. Cases are typically
+                made from aluminium or steel, with acrylic or tempered glass windows.</p>
+
+            <picture class="contentImage">
+                <source srcset="images/installing-desktop.webp" media="(min-width: 800px)" type="image/webp">
+                <source srcset="images/installing-tablet.webp" media="(min-width: 500px)" type="image/webp">
+                <source srcset="images/installing-mobile.webp" media="(min-width: 250px)" type="image/webp">
+                <img src="images/installing-fallback.jpg" alt="Person installing computer components">
+            </picture>
+
+            <p>Power supplies are available in various efficiency ratings and power ratings. The power rating
+                describes the maximum power output in watts, typically ranging from 300-1000W. The system power draw
+                is calculated by adding the power draws of each component together and ensuring the power supply
+                output exceeds this. Many parts manufacturers overestimate their power draw to minimise the
+                potential of insufficient power. Efficiency is rated using the 80 plus certification, ranging from
+                bronze to titanium, up to 94% efficiency.</p>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul id="footerInfo">
+                <li>Made by Sam Palmer</li>
+                <li>sam.palmer@student.staffs.ac.uk</li>
+            </ul>
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="sources">Sources</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function () {
+                //register service worker
+                navigator.serviceWorker.register('/scripts/serviceworker.js', { scope: "/" }).then(
+                    function (registration) {
+                        console.log('Service worker registration successful',
+                            registration);
+                    },
+                    function (err) {
+                        console.log('Service worker registration failed', err);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>

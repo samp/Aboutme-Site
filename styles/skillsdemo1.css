@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.eot');
+    src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('../fonts/NotoSerif.eot');
+    src: url('../fonts/NotoSerif.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSerif.woff2') format('woff2'), url('../fonts/NotoSerif.woff') format('woff'), url('../fonts/NotoSerif.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+html{
+    border-top: 2px solid rgba(153, 255, 102, 1);
+    border-bottom: 2px solid rgba(153, 255, 102, 1);
+}
+
+body {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* header styles */
+
+h1, h2, nav {
+    text-align: center;
+}
+
+h1 {
+    font-size: 13vw;
+    animation: fadeIn 1s ease-in both;
+}
+
+h1, h2 {
+    font-family: 'Noto Serif', serif;
+}
+
+h2 {
+    margin: 0 0 0.5em 0;
+    font-size: 8.5vw;
+    animation: fadeIn 1s ease-in 0.45s both;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 1em;
+}
+
+header {
+    border-bottom: 1px solid rgba(153, 255, 102, 1);
+}
+
+/* main nav styles */
+
+nav, section {
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+#mainNav ul {
+    display:flex;
+}
+
+#mainNav li {
+    line-height: 2em;
+    width: calc(100%/3);
+}
+
+#mainNav a {
+    padding-top: 3.5em;
+    background-size: 2.5em;
+    background-repeat: no-repeat;
+    background-position: right 50% top 0.75em;
+}
+
+#mainNav li:nth-of-type(1) a {
+    background-image: url("../images/power-off-solid.svg");
+    border-right: 1px solid rgba(153, 255, 102, 1);
+    animation: fadeIn 1s ease-in both;
+}
+#mainNav li:nth-of-type(2) a {
+    background-image: url("../images/microchip-solid.svg");
+    animation: fadeIn 1s ease-in 0.15s both;
+}
+#mainNav li:nth-of-type(3) a {
+    background-image: url("../images/scroll-solid.svg");
+    border-left: 1px solid rgba(153, 255, 102, 1);
+    animation: fadeIn 1s ease-in 0.3s both;
+}
+
+/* content styles */
+
+section {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 25%, rgba(153, 255, 102, 1) 100%);
+}
+
+#mainImage img {
+    display: block;
+}
+
+#mainImage img, section {
+    border-top: 1px solid black;
+}
+
+img {
+    max-width: 100%;
+}
+
+article, p, .contentImage img{
+    animation: fadeIn 1s ease-in 0.6s both;
+}
+
+a {
+    display: inline-block;
+    width: 100%;
+}
+
+article ul {
+    padding-left: 1em;
+}
+
+/* TABLET */
+
+@media only screen and (min-width: 500px) {
+    section {
+        padding: 2em;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 750px) {
+    section {
+        display: grid;
+        grid-template-rows: 4em 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    .contentHeader {
+        grid-column-end: span 2;
+    }
+    header{
+        border-bottom: none;
+    }
+    p, article, .contentImage img {
+        padding: 1em;
+    }
+    .contentImage img {
+        width: calc(100% - 2em);
+    }
+    .contentImage {
+        align-self: center;
+    }
+    #mainNav, h1 {
+        width: 50%;
+        float: left;
+    }
+    #mainNav {
+        padding: 1em 0;
+        font-size: 1.15em;
+    }
+    #mainNav ul {
+        display:block;
+    }
+    #mainNav a {
+        padding-top: 0;
+        max-width: 100%;
+        background-size: 1.5em;
+        background-position: right 0.5em top 50%;
+        border: none !important;
+    }
+    /* Adapted from https://keithjgrant.com/posts/2017/07/transitioning-gradients/ */
+    #mainNav li {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 25%, rgba(153, 255, 102, 1) 100%);
+        transition: all 1s;
+        margin: 1px;
+        z-index: 1;
+        position: relative;
+        width: 100%;
+    }
+    #mainNav li::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: white;
+        z-index: -1;
+        transition: opacity 0.5s ease;
+        opacity: 0;
+    }
+    #mainNav li:hover::before {
+        opacity: 1;
+    }
+}

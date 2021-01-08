@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Skills page for Sam Palmer">
+    <title>Sam Palmer - Skills</title>
+    <link rel="preload" href='fonts/Orkney-Regular.woff2' as="font" crossorigin>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#404040">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Sam Palmer">
+    <meta name="application-name" content="Sam Palmer">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#afeeee">
+</head>
+
+<body>
+    <!--HEADER-->
+
+    <header>
+        <h1>Sam Palmer</h1>
+    </header>
+    <nav id="mainNav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="skills">Skills</a></li>
+            <li><a href="qualifications">Qualifications</a></li>
+        </ul>
+    </nav>
+
+    <!--MAIN CONTENT-->
+
+    <main>
+        <!--FIRST SECTION - DESCRIPTION -->
+        <section>
+            <h2 class="contentHeader">CSS & ECMAscript</h2>
+
+            <p>CSS stands for Cascading Style Sheets and describes how HTML is displayed in a web browser. CSS
+                allows styles and content to be separated, improving accessibility, flexibility, and control. It is used
+                to alter the appearance of a web page. The CSS examples below demonstrate how CSS can be used to
+                completely change the way a page looks - both examples have identical HTML.</p>
+
+            <p>ECMAscript is a specification used to standardise JavaScript. It is used for both client-side web
+                scripting and server applications using Node.js. Commonly, it allows webpages to be interactive,
+                including storing data. The example below demonstates interactivity, storage, and creating elements from
+                a file.</p>
+
+        </section>
+
+        <!--SECOND SECTION - EXAMPLE 1-->
+        <section>
+            <h2 class="contentHeader">CSS Example 1</h2>
+
+            <picture class="contentImage">
+                <source srcset="/images/typing-desktop.webp" media="(min-width: 800px)" type="image/webp">
+                <source srcset="/images/typing-tablet.webp" media="(min-width: 500px)" type="image/webp">
+                <source srcset="/images/typing-mobile.webp" media="(min-width: 250px)" type="image/webp">
+                <img src="/images/typing-fallback.jpg" alt="Hands typing on a dimly lit keyboard">
+            </picture>
+
+            <p>The first CSS example shows a page about computer components styled using CSS.<br><br><a
+                    href="skillsdemo1">First skills demo</a></p>
+        </section>
+
+        <!--THIRD SECTION - EXAMPLE 2-->
+        <section>
+            <h2 class="contentHeader">CSS Example 2</h2>
+
+            <p>The second CSS example shows the same HTML page styled in a different way. <br><br><a
+                    href="skillsdemo2">Second skills demo</a></p>
+
+            <picture class="contentImage">
+                <source srcset="/images/motherboard-desktop.webp" media="(min-width: 800px)" type="image/webp">
+                <source srcset="/images/motherboard-tablet.webp" media="(min-width: 500px)" type="image/webp">
+                <source srcset="/images/motherboard-mobile.webp" media="(min-width: 250px)" type="image/webp">
+                <img src="/images/motherboard-fallback.jpg" alt="Close up of CPU socket on motherboard">
+            </picture>
+        </section>
+
+        <!--FOURTH SECTION - COFFEE SHOP-->
+        <section>
+            <h2 class="contentHeader">Coffee Shop Demo</h2>
+
+            <picture class="contentImage">
+                <source srcset="/images/coffee-desktop.webp" media="(min-width: 800px)" type="image/webp">
+                <source srcset="/images/coffee-tablet.webp" media="(min-width: 500px)" type="image/webp">
+                <source srcset="/images/coffee-mobile.webp" media="(min-width: 250px)" type="image/webp">
+                <img src="/images/coffee-fallback.jpg" alt="Barista pouring milk into coffee">
+            </picture>
+
+            <p>The ECMAscript example demonstrates an application simulating an ordering system in a coffee shop. It
+                includes local storage features. <br><br> <a href="coffee">Coffee shop demo</a></p>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+
+    <footer>
+        <nav>
+            <ul id="footerInfo">
+                <li>Made by Sam Palmer</li>
+                <li>sam.palmer@student.staffs.ac.uk</li>
+            </ul>
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="sources">Sources</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!--SERVICE WORKER-->
+
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function () {
+                //register service worker
+                navigator.serviceWorker.register('/scripts/serviceworker.js', { scope: "/" }).then(
+                    function (registration) {
+                        console.log('Service worker registration successful',
+                            registration);
+                    },
+                    function (err) {
+                        console.log('Service worker registration failed', err);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>
